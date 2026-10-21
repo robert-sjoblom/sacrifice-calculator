@@ -1,0 +1,32 @@
+name: Update billionaires
+
+on:
+  schedule:
+    - cron: "30 22 * * 1-5" # weekdays, after US market close
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Fetch Forbes real-time top 30
+        run: |
+          curl -fsS -A 'Mozilla/5.0' -o "$RUNNER_TEMP/forbes.json" \
+            'https://www.forbes.com/forbesapi/person/rtb/0/position/true.json?fields=personName,finalWorth&limit=30'
+          # finalWorth is in millions USD; store billions with one decimal
+          jq --arg updated "$(date -u +%F)" \
+            '{updated: $updated, people: [.personList.personsLists[] | [.personName, ((.finalWorth / 100 | round) / 10)]]}' \
+            "$RUNNER_TEMP/forbes.json" > billionaires.json
+          jq -e '.people | length > 0' billionaires.json > /dev/null
+
+      - name: Commit if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add billionaires.json
+          git diff --cached --quiet || { git commit -m "Update billionaire net worths"; git push; }

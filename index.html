@@ -80,51 +80,18 @@
   </div>
 
   <footer>
-    <p>Net worths from <a href="https://www.forbes.com/real-time-billionaires/">Forbes Real-Time Billionaires</a>, 21 Oct 2026.
+    <p>Net worths from <a href="https://www.forbes.com/real-time-billionaires/">Forbes Real-Time Billionaires</a>, updated <span id="updated"></span>.
     Nothing you type leaves your browser.</p>
     <p>Idea from a post by @GianmarcoSoresi.</p>
   </footer>
 </main>
 
 <script>
-// Forbes Real-Time Billionaires top 30, net worth in billions USD, fetched 2026-10-21.
-const BILLIONAIRES = [
-  ["Elon Musk", 925.0],
-  ["Jeff Bezos", 381.0],
-  ["Larry Page", 279.0],
-  ["Sergey Brin", 256.8],
-  ["Michael Dell", 240.8],
-  ["Mark Zuckerberg", 238.2],
-  ["Jensen Huang", 187.6],
-  ["Larry Ellison", 171.0],
-  ["Steve Ballmer", 164.2],
-  ["Warren Buffett", 153.3],
-  ["Amancio Ortega", 145.3],
-  ["Rob Walton & family", 141.3],
-  ["Jim Walton & family", 138.0],
-  ["Alice Walton", 127.6],
-  ["Carlos Slim Helu & family", 120.0],
-  ["Bill Gates", 118.0],
-  ["Bernard Arnault & family", 117.6],
-  ["Changpeng Zhao", 114.6],
-  ["Thomas Peterffy", 96.5],
-  ["Francoise Bettencourt Meyers & family", 96.1],
-  ["Michael Bloomberg", 94.9],
-  ["Giancarlo Devasini", 89.3],
-  ["Julia Koch & family", 84.6],
-  ["Zhang Yiming", 84.0],
-  ["Mukesh Ambani", 83.6],
-  ["Jeff Yass", 77.8],
-  ["Charles Koch & family", 76.9],
-  ["Gautam Adani", 76.7],
-  ["Germán Larrea Mota Velasco & family", 68.4],
-  ["Tadashi Yanai & family", 65.0],
-];
+// [name, net worth in billions USD], refreshed by .github/workflows/update-billionaires.yml
+let BILLIONAIRES = [];
 
 const $ = id => document.getElementById(id);
 const who = $("who");
-BILLIONAIRES.forEach(([name, worth], i) => who.add(new Option(`${name} ($${worth}B)`, i)));
-who.add(new Option("Someone else…", "custom"));
 
 const pct = n => new Intl.NumberFormat(undefined, { maximumSignificantDigits: 3 }).format(n) + "%";
 const money = n => new Intl.NumberFormat(undefined, {
@@ -148,8 +115,14 @@ function update() {
   $("equiv").textContent = mine > 0 ? money(share * mine) : "nothing";
 }
 
-document.querySelectorAll("input, select").forEach(el => el.addEventListener("input", update));
-update();
+fetch("billionaires.json").then(r => r.json()).then(data => {
+  BILLIONAIRES = data.people;
+  BILLIONAIRES.forEach(([name, worth], i) => who.add(new Option(`${name} ($${worth}B)`, i)));
+  who.add(new Option("Someone else…", "custom"));
+  $("updated").textContent = data.updated;
+  document.querySelectorAll("input, select").forEach(el => el.addEventListener("input", update));
+  update();
+});
 </script>
 </body>
 </html>
