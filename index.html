@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sacrifice Calculator</title>
+<meta name="description" content="When a billionaire donates, see what the same share of your own net worth would be.">
+<style>
+  :root {
+    --bg: #faf9f7; --fg: #1c1b19; --muted: #6b6760;
+    --card: #ffffff; --border: #dcd8d1; --accent: #0b6e4f;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #161513; --fg: #ece9e3; --muted: #9a958c;
+      --card: #201f1c; --border: #3a3833; --accent: #4cc39a;
+    }
+  }
+  * { box-sizing: border-box; }
+  [hidden] { display: none !important; }
+  body { margin: 0; background: var(--bg); color: var(--fg); font: 16px/1.5 system-ui, sans-serif; }
+  main { max-width: 34rem; margin: 0 auto; padding: 2.5rem 1rem 3rem; }
+  h1 { font-size: 1.75rem; line-height: 1.2; margin: 0 0 .5rem; }
+  .lede { color: var(--muted); margin: 0 0 1.5rem; }
+  label { display: block; font-weight: 600; margin: 1.25rem 0 .375rem; }
+  .row { display: flex; gap: .5rem; align-items: center; }
+  .row span { color: var(--muted); white-space: nowrap; }
+  input, select {
+    font: inherit; color: inherit; background: var(--card);
+    border: 1px solid var(--border); border-radius: 6px; padding: .5rem .625rem; min-width: 0;
+  }
+  input { flex: 1; width: 100%; }
+  #who { width: 100%; }
+  .result { margin-top: 2rem; padding: 1.25rem; background: var(--card); border: 1px solid var(--border); border-radius: 8px; }
+  .result p { margin: 0; }
+  .big { font-size: 2.25rem; font-weight: 700; line-height: 1.2; color: var(--accent); margin: .25rem 0 !important; overflow-wrap: anywhere; }
+  footer { margin-top: 2rem; font-size: .875rem; color: var(--muted); }
+  footer a { color: inherit; }
+</style>
+</head>
+<body>
+<main>
+  <h1>How big a sacrifice is that?</h1>
+  <p class="lede">When a billionaire donates, see what the same share of <em>your</em> net worth would be.</p>
+
+  <label for="who">Who donated?</label>
+  <select id="who"></select>
+
+  <div id="custom" hidden>
+    <label for="theirWorth">Their net worth</label>
+    <div class="row">
+      <input id="theirWorth" type="number" min="0" step="any" placeholder="e.g. 50">
+      <span>billion USD</span>
+    </div>
+  </div>
+
+  <label for="amount">How much did they give?</label>
+  <div class="row">
+    <input id="amount" type="number" min="0" step="any" value="100">
+    <select id="unit" aria-label="Unit">
+      <option value="1e6" selected>million</option>
+      <option value="1e9">billion</option>
+    </select>
+    <span>USD</span>
+  </div>
+
+  <label for="mine">Your net worth</label>
+  <div class="row">
+    <input id="mine" type="number" step="any" placeholder="e.g. 50000">
+    <select id="currency" aria-label="Currency">
+      <option>USD</option><option>EUR</option><option>GBP</option><option>SEK</option>
+      <option>NOK</option><option>DKK</option><option>CHF</option><option>CAD</option>
+      <option>AUD</option><option>INR</option><option>JPY</option>
+    </select>
+  </div>
+
+  <div class="result" id="result" hidden>
+    <p>That's <strong id="pct"></strong> of <span id="whose"></span> net worth. The same share of yours:</p>
+    <p class="big" id="equiv"></p>
+  </div>
+
+  <footer>
+    <p>Net worths from <a href="https://www.forbes.com/real-time-billionaires/">Forbes Real-Time Billionaires</a>, 21 Oct 2026.
+    Nothing you type leaves your browser.</p>
+    <p>Idea from a post by @GianmarcoSoresi.</p>
+  </footer>
+</main>
+
+<script>
+// Forbes Real-Time Billionaires top 30, net worth in billions USD, fetched 2026-10-21.
+const BILLIONAIRES = [
+  ["Elon Musk", 925.0],
+  ["Jeff Bezos", 381.0],
+  ["Larry Page", 279.0],
+  ["Sergey Brin", 256.8],
+  ["Michael Dell", 240.8],
+  ["Mark Zuckerberg", 238.2],
+  ["Jensen Huang", 187.6],
+  ["Larry Ellison", 171.0],
+  ["Steve Ballmer", 164.2],
+  ["Warren Buffett", 153.3],
+  ["Amancio Ortega", 145.3],
+  ["Rob Walton & family", 141.3],
+  ["Jim Walton & family", 138.0],
+  ["Alice Walton", 127.6],
+  ["Carlos Slim Helu & family", 120.0],
+  ["Bill Gates", 118.0],
+  ["Bernard Arnault & family", 117.6],
+  ["Changpeng Zhao", 114.6],
+  ["Thomas Peterffy", 96.5],
+  ["Francoise Bettencourt Meyers & family", 96.1],
+  ["Michael Bloomberg", 94.9],
+  ["Giancarlo Devasini", 89.3],
+  ["Julia Koch & family", 84.6],
+  ["Zhang Yiming", 84.0],
+  ["Mukesh Ambani", 83.6],
+  ["Jeff Yass", 77.8],
+  ["Charles Koch & family", 76.9],
+  ["Gautam Adani", 76.7],
+  ["Germán Larrea Mota Velasco & family", 68.4],
+  ["Tadashi Yanai & family", 65.0],
+];
+
+const $ = id => document.getElementById(id);
+const who = $("who");
+BILLIONAIRES.forEach(([name, worth], i) => who.add(new Option(`${name} ($${worth}B)`, i)));
+who.add(new Option("Someone else…", "custom"));
+
+const pct = n => new Intl.NumberFormat(undefined, { maximumSignificantDigits: 3 }).format(n) + "%";
+const money = n => new Intl.NumberFormat(undefined, {
+  style: "currency", currency: $("currency").value,
+  ...(n < 1000 ? { maximumSignificantDigits: 3 } : { minimumFractionDigits: 0, maximumFractionDigits: 0 }),
+}).format(n);
+
+function update() {
+  const custom = who.value === "custom";
+  $("custom").hidden = !custom;
+  const theirWorth = (custom ? +$("theirWorth").value : BILLIONAIRES[who.value][1]) * 1e9;
+  const gift = +$("amount").value * +$("unit").value;
+  const mine = +$("mine").value;
+
+  $("result").hidden = !(theirWorth > 0 && gift > 0 && $("mine").value !== "");
+  if ($("result").hidden) return;
+
+  const share = gift / theirWorth;
+  $("pct").textContent = pct(share * 100);
+  $("whose").textContent = custom ? "their" : BILLIONAIRES[who.value][0] + "'s";
+  $("equiv").textContent = mine > 0 ? money(share * mine) : "nothing";
+}
+
+document.querySelectorAll("input, select").forEach(el => el.addEventListener("input", update));
+update();
+</script>
+</body>
+</html>
