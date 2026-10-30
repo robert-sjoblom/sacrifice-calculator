@@ -1,73 +1,73 @@
 {
-  "updated": "2026-10-29",
+  "updated": "2026-10-30",
   "people": [
     [
       "Elon Musk",
-      924
+      916.8
     ],
     [
       "Jeff Bezos",
-      373.9
-    ],
-    [
-      "Larry Page",
-      267.3
+      364.4
     ],
     [
       "Michael Dell",
-      253.2
+      246.7
+    ],
+    [
+      "Larry Page",
+      235.9
     ],
     [
       "Sergey Brin",
-      246.1
+      217.2
     ],
     [
       "Mark Zuckerberg",
-      210.5
+      214.6
     ],
     [
       "Jensen Huang",
-      186.6
+      185.2
     ],
     [
       "Larry Ellison",
-      186.5
+      181.2
     ],
     [
       "Steve Ballmer",
-      164
+      163.8
     ],
     [
       "Warren Buffett",
-      153.7
+      154.8
     ],
     [
       "Amancio Ortega",
-      146.8
+      145.1
     ],
     [
       "Rob Walton & family",
-      142.1
+      144.3
     ],
     [
       "Jim Walton & family",
-      138.9
+      141.1
     ],
     [
       "Alice Walton",
-      128.5
+      130.6
     ],
     [
       "Carlos Slim Helu & family",
-      121
+      121.6
     ],
     [
       "Bill Gates",
-      118.2
+      119.2
     ],
     [
       "Bernard Arnault & family",
-      116.5
+      116.2
     ],
     [
       "Changpeng Zhao",
@@ -75,11 +75,11 @@
     ],
     [
       "Francoise Bettencourt Meyers & family",
-      100
+      100.1
     ],
     [
       "Thomas Peterffy",
-      97.2
+      95.3
     ],
     [
       "Michael Bloomberg",
@@ -99,7 +99,11 @@
     ],
     [
       "Mukesh Ambani",
-      79.9
+      80.4
+    ],
+    [
+      "Gautam Adani",
+      78.2
     ],
     [
       "Jeff Yass",
@@ -110,16 +114,12 @@
       76.9
     ],
     [
-      "Gautam Adani",
-      75
-    ],
-    [
       "Germán Larrea Mota Velasco & family",
-      66.3
+      65.8
     ],
     [
       "Tadashi Yanai & family",
-      64
+      65.2
     ]
   ]
 }
