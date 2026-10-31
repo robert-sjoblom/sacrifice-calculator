@@ -1,73 +1,73 @@
 {
-  "updated": "2026-10-30",
+  "updated": "2026-10-31",
   "people": [
     [
       "Elon Musk",
-      916.8
+      868.5
     ],
     [
       "Jeff Bezos",
-      364.4
-    ],
-    [
-      "Michael Dell",
-      246.7
+      361.3
     ],
     [
       "Larry Page",
-      235.9
+      232.7
+    ],
+    [
+      "Michael Dell",
+      228.5
     ],
     [
       "Sergey Brin",
-      217.2
+      214.3
     ],
     [
       "Mark Zuckerberg",
-      214.6
+      211.4
     ],
     [
       "Jensen Huang",
-      185.2
+      177.5
     ],
     [
       "Larry Ellison",
-      181.2
+      171.6
     ],
     [
       "Steve Ballmer",
-      163.8
+      161.7
     ],
     [
       "Warren Buffett",
-      154.8
-    ],
-    [
-      "Amancio Ortega",
-      145.1
+      154.4
     ],
     [
       "Rob Walton & family",
-      144.3
+      146.4
+    ],
+    [
+      "Amancio Ortega",
+      145
     ],
     [
       "Jim Walton & family",
-      141.1
+      143.1
     ],
     [
       "Alice Walton",
-      130.6
+      132.6
     ],
     [
       "Carlos Slim Helu & family",
-      121.6
+      122.1
     ],
     [
       "Bill Gates",
-      119.2
+      120.4
     ],
     [
       "Bernard Arnault & family",
-      116.2
+      117.4
     ],
     [
       "Changpeng Zhao",
@@ -75,15 +75,15 @@
     ],
     [
       "Francoise Bettencourt Meyers & family",
-      100.1
-    ],
-    [
-      "Thomas Peterffy",
-      95.3
+      102.9
     ],
     [
       "Michael Bloomberg",
       94.9
+    ],
+    [
+      "Thomas Peterffy",
+      90
     ],
     [
       "Giancarlo Devasini",
@@ -99,27 +99,27 @@
     ],
     [
       "Mukesh Ambani",
-      80.4
-    ],
-    [
-      "Gautam Adani",
-      78.2
+      80
     ],
     [
       "Jeff Yass",
       77.8
     ],
     [
+      "Gautam Adani",
+      77.5
+    ],
+    [
       "Charles Koch & family",
       76.9
     ],
     [
-      "Germán Larrea Mota Velasco & family",
-      65.8
+      "Tadashi Yanai & family",
+      65.4
     ],
     [
-      "Tadashi Yanai & family",
-      65.2
+      "Germán Larrea Mota Velasco & family",
+      63
     ]
   ]
 }
