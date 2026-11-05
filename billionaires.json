@@ -1,73 +1,73 @@
 {
-  "updated": "2026-11-04",
+  "updated": "2026-11-05",
   "people": [
     [
       "Elon Musk",
-      901.7
+      868.8
     ],
     [
       "Jeff Bezos",
-      370.5
+      384
     ],
     [
       "Larry Page",
-      232.8
-    ],
-    [
-      "Michael Dell",
-      224.8
+      239.8
     ],
     [
       "Sergey Brin",
-      214.4
+      220.8
     ],
     [
       "Mark Zuckerberg",
-      213.4
+      216.5
+    ],
+    [
+      "Michael Dell",
+      213.1
     ],
     [
       "Jensen Huang",
-      179.2
-    ],
-    [
-      "Larry Ellison",
-      167
+      173.7
     ],
     [
       "Steve Ballmer",
-      161.5
+      170.3
     ],
     [
       "Warren Buffett",
-      158.4
+      164.5
+    ],
+    [
+      "Larry Ellison",
+      164
     ],
     [
       "Rob Walton & family",
-      147.6
+      151.5
     ],
     [
       "Amancio Ortega",
-      145.3
+      151.4
     ],
     [
       "Jim Walton & family",
-      144.4
+      148.3
     ],
     [
       "Alice Walton",
-      133.8
-    ],
-    [
-      "Carlos Slim Helu & family",
-      123.5
+      137.6
     ],
     [
       "Bernard Arnault & family",
-      121.8
+      125.9
+    ],
+    [
+      "Carlos Slim Helu & family",
+      123.8
     ],
     [
       "Bill Gates",
-      120.2
+      122.4
     ],
     [
       "Changpeng Zhao",
@@ -75,7 +75,7 @@
     ],
     [
       "Francoise Bettencourt Meyers & family",
-      102.3
+      104.8
     ],
     [
       "Michael Bloomberg",
@@ -83,14 +83,14 @@
     ],
     [
       "Thomas Peterffy",
-      90.6
-    ],
-    [
-      "Giancarlo Devasini",
-      89.3
+      91
     ],
     [
       "Mukesh Ambani",
+      90.1
+    ],
+    [
+      "Giancarlo Devasini",
       89.3
     ],
     [
@@ -103,7 +103,7 @@
     ],
     [
       "Gautam Adani",
-      79.2
+      82
     ],
     [
       "Jeff Yass",
@@ -115,11 +115,11 @@
     ],
     [
       "Tadashi Yanai & family",
-      65.9
+      70.6
     ],
     [
       "Zhong Shanshan",
-      63.7
+      64.6
     ]
   ]
 }
