@@ -1,73 +1,73 @@
 {
-  "updated": "2026-11-05",
+  "updated": "2026-11-06",
   "people": [
     [
       "Elon Musk",
-      868.8
+      789.5
     ],
     [
       "Jeff Bezos",
-      384
+      378.9
     ],
     [
       "Larry Page",
-      239.8
+      235.2
     ],
     [
       "Sergey Brin",
-      220.8
-    ],
-    [
-      "Mark Zuckerberg",
       216.5
     ],
     [
-      "Michael Dell",
-      213.1
+      "Mark Zuckerberg",
+      208
     ],
     [
-      "Jensen Huang",
-      173.7
+      "Michael Dell",
+      191.1
     ],
     [
       "Steve Ballmer",
-      170.3
+      165.2
     ],
     [
       "Warren Buffett",
-      164.5
+      162.2
     ],
     [
-      "Larry Ellison",
-      164
-    ],
-    [
-      "Rob Walton & family",
-      151.5
+      "Jensen Huang",
+      157.9
     ],
     [
       "Amancio Ortega",
-      151.4
+      153.9
+    ],
+    [
+      "Larry Ellison",
+      153.3
+    ],
+    [
+      "Rob Walton & family",
+      150.2
     ],
     [
       "Jim Walton & family",
-      148.3
+      146.9
     ],
     [
       "Alice Walton",
-      137.6
+      136.3
     ],
     [
       "Bernard Arnault & family",
-      125.9
+      127
     ],
     [
       "Carlos Slim Helu & family",
-      123.8
+      124.4
     ],
     [
       "Bill Gates",
-      122.4
+      121.7
     ],
     [
       "Changpeng Zhao",
@@ -75,23 +75,23 @@
     ],
     [
       "Francoise Bettencourt Meyers & family",
-      104.8
+      107.4
     ],
     [
       "Michael Bloomberg",
       94.9
     ],
     [
-      "Thomas Peterffy",
-      91
-    ],
-    [
       "Mukesh Ambani",
-      90.1
+      90.5
     ],
     [
       "Giancarlo Devasini",
       89.3
+    ],
+    [
+      "Thomas Peterffy",
+      85.4
     ],
     [
       "Julia Koch & family",
@@ -103,7 +103,7 @@
     ],
     [
       "Gautam Adani",
-      82
+      83
     ],
     [
       "Jeff Yass",
@@ -115,11 +115,11 @@
     ],
     [
       "Tadashi Yanai & family",
-      70.6
+      67.3
     ],
     [
       "Zhong Shanshan",
-      64.6
+      65.7
     ]
   ]
 }
