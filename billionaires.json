@@ -1,65 +1,65 @@
 {
-  "updated": "2026-11-12",
+  "updated": "2026-11-13",
   "people": [
     [
       "Elon Musk",
-      890.7
+      894.3
     ],
     [
       "Jeff Bezos",
-      384.1
+      385.3
     ],
     [
       "Larry Page",
-      242.9
+      246.8
     ],
     [
       "Sergey Brin",
-      223.6
+      227.2
     ],
     [
       "Michael Dell",
-      216.7
+      219.2
     ],
     [
       "Mark Zuckerberg",
-      216
+      214.3
     ],
     [
       "Larry Ellison",
-      168.9
+      167.7
     ],
     [
       "Warren Buffett",
-      167.5
+      167.6
     ],
     [
       "Steve Ballmer",
-      161.5
+      162
     ],
     [
       "Amancio Ortega",
-      153.1
-    ],
-    [
-      "Jensen Huang",
-      151.2
+      151.6
     ],
     [
       "Rob Walton & family",
-      148.3
+      148.8
     ],
     [
       "Jim Walton & family",
-      145.1
+      145.6
+    ],
+    [
+      "Jensen Huang",
+      144.7
     ],
     [
       "Alice Walton",
-      134.5
+      135
     ],
     [
       "Carlos Slim Helu & family",
-      125.9
+      125.8
     ],
     [
       "Bill Gates",
@@ -67,7 +67,7 @@
     ],
     [
       "Bernard Arnault & family",
-      121.9
+      121.6
     ],
     [
       "Changpeng Zhao",
@@ -75,19 +75,19 @@
     ],
     [
       "Francoise Bettencourt Meyers & family",
-      104.9
-    ],
-    [
-      "Thomas Peterffy",
-      96.1
+      104.3
     ],
     [
       "Michael Bloomberg",
       94.9
     ],
     [
+      "Thomas Peterffy",
+      94.8
+    ],
+    [
       "Mukesh Ambani",
-      92.4
+      92.7
     ],
     [
       "Giancarlo Devasini",
@@ -98,12 +98,12 @@
       84.6
     ],
     [
-      "Zhang Yiming",
-      84
+      "Gautam Adani",
+      84.4
     ],
     [
-      "Gautam Adani",
-      83.9
+      "Zhang Yiming",
+      84
     ],
     [
       "Jeff Yass",
@@ -115,11 +115,11 @@
     ],
     [
       "Tadashi Yanai & family",
-      69.3
+      69.6
     ],
     [
       "Zhong Shanshan",
-      65.2
+      64.9
     ]
   ]
 }
