@@ -1,85 +1,85 @@
 {
-  "updated": "2026-11-20",
+  "updated": "2026-11-21",
   "people": [
     [
       "Elon Musk",
-      877.4
+      811.7
     ],
     [
       "Jeff Bezos",
-      376.2
+      366.8
     ],
     [
       "Larry Page",
-      227.1
+      221.5
     ],
     [
       "Sergey Brin",
-      209.1
+      204
     ],
     [
       "Mark Zuckerberg",
-      205
+      193.1
     ],
     [
       "Michael Dell",
-      199
+      181.8
     ],
     [
       "Warren Buffett",
-      157.3
+      156.6
     ],
     [
       "Steve Ballmer",
-      155.7
-    ],
-    [
-      "Larry Ellison",
-      148.8
+      152.2
     ],
     [
       "Rob Walton & family",
-      148.7
-    ],
-    [
-      "Amancio Ortega",
-      147.6
+      150.4
     ],
     [
       "Jim Walton & family",
-      145.4
+      147.2
+    ],
+    [
+      "Amancio Ortega",
+      146.4
+    ],
+    [
+      "Larry Ellison",
+      137.7
     ],
     [
       "Alice Walton",
-      134.9
-    ],
-    [
-      "Jensen Huang",
-      127.5
+      136.5
     ],
     [
       "Carlos Slim Helu & family",
-      123.1
+      123
     ],
     [
       "Bill Gates",
-      118.9
-    ],
-    [
-      "Bernard Arnault & family",
-      116.6
+      118
     ],
     [
       "Changpeng Zhao",
       114.6
     ],
     [
+      "Bernard Arnault & family",
+      114
+    ],
+    [
+      "Jensen Huang",
+      110.1
+    ],
+    [
       "Francoise Bettencourt Meyers & family",
-      101
+      100.8
     ],
     [
       "Mukesh Ambani",
-      95
+      95.5
     ],
     [
       "Michael Bloomberg",
@@ -90,12 +90,8 @@
       89.3
     ],
     [
-      "Thomas Peterffy",
-      88.6
-    ],
-    [
       "Gautam Adani",
-      84.8
+      85.4
     ],
     [
       "Julia Koch & family",
@@ -104,6 +100,10 @@
     [
       "Zhang Yiming",
       84
+    ],
+    [
+      "Thomas Peterffy",
+      83.7
     ],
     [
       "Jeff Yass",
@@ -115,11 +115,11 @@
     ],
     [
       "Tadashi Yanai & family",
-      70.3
+      69.6
     ],
     [
       "Zhong Shanshan",
-      64.8
+      65.2
     ]
   ]
 }
