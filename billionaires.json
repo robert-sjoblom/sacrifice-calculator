@@ -1,89 +1,93 @@
 {
-  "updated": "2026-11-21",
+  "updated": "2026-11-24",
   "people": [
     [
       "Elon Musk",
-      811.7
+      855.8
     ],
     [
       "Jeff Bezos",
-      366.8
+      374.4
     ],
     [
       "Larry Page",
-      221.5
+      234.1
     ],
     [
       "Sergey Brin",
-      204
+      215.6
     ],
     [
       "Mark Zuckerberg",
-      193.1
+      205.5
     ],
     [
       "Michael Dell",
-      181.8
+      200.1
     ],
     [
       "Warren Buffett",
-      156.6
+      157.3
     ],
     [
       "Steve Ballmer",
-      152.2
-    ],
-    [
-      "Rob Walton & family",
-      150.4
-    ],
-    [
-      "Jim Walton & family",
-      147.2
-    ],
-    [
-      "Amancio Ortega",
-      146.4
+      154.3
     ],
     [
       "Larry Ellison",
-      137.7
+      152.3
+    ],
+    [
+      "Rob Walton & family",
+      151.9
+    ],
+    [
+      "Jim Walton & family",
+      148.6
+    ],
+    [
+      "Amancio Ortega",
+      148.2
+    ],
+    [
+      "Jensen Huang",
+      143.8
     ],
     [
       "Alice Walton",
-      136.5
+      138
     ],
     [
       "Carlos Slim Helu & family",
-      123
+      123.1
     ],
     [
       "Bill Gates",
-      118
+      119.3
+    ],
+    [
+      "Bernard Arnault & family",
+      115.9
     ],
     [
       "Changpeng Zhao",
       114.6
     ],
     [
-      "Bernard Arnault & family",
-      114
-    ],
-    [
-      "Jensen Huang",
-      110.1
-    ],
-    [
       "Francoise Bettencourt Meyers & family",
-      100.8
-    ],
-    [
-      "Mukesh Ambani",
-      95.5
+      101.5
     ],
     [
       "Michael Bloomberg",
       94.9
+    ],
+    [
+      "Mukesh Ambani",
+      94.5
+    ],
+    [
+      "Thomas Peterffy",
+      89.5
     ],
     [
       "Giancarlo Devasini",
@@ -91,7 +95,7 @@
     ],
     [
       "Gautam Adani",
-      85.4
+      84.8
     ],
     [
       "Julia Koch & family",
@@ -100,10 +104,6 @@
     [
       "Zhang Yiming",
       84
-    ],
-    [
-      "Thomas Peterffy",
-      83.7
     ],
     [
       "Jeff Yass",
@@ -115,11 +115,11 @@
     ],
     [
       "Tadashi Yanai & family",
-      69.6
+      71.1
     ],
     [
       "Zhong Shanshan",
-      65.2
+      65.8
     ]
   ]
 }
